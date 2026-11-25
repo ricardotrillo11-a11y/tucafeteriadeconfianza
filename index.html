@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café en casa: guía de compra y selección en Amazon</title>
+<meta name="description" content="Selección de más de 65 productos ordenados por categoría para preparar buen café en casa: cafeteras, molinillos, accesorios y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#F2F5F1;--tinta:#16302B;--suave:#55696A;--linea:#CBD6D0;--verde:#1F5C4D;--ambar:#F2A900;--blanco:#fff;--rojo:#9A4B3B}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+body{margin:0;background:var(--papel);color:var(--tinta);font:18px/1.65 "Newsreader",Georgia,serif}
+h1,h2,h3,.btn,.num,.sans{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+a{color:var(--verde)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+:focus-visible{outline:3px solid var(--verde);outline-offset:2px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(242,245,241,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:3.5rem}
+.marca{font:800 1.1rem "Bricolage Grotesque",sans-serif;color:var(--tinta);text-decoration:none}
+.nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font:600 .9rem "Bricolage Grotesque",sans-serif}
+.nav a:not(.marca){color:var(--tinta);text-decoration:none}
+.nav a:not(.marca):hover{text-decoration:underline}
+
+header.hero{padding:3.5rem 0 2rem}
+h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.03;font-weight:800;letter-spacing:-.025em;margin:0 0 1.1rem;max-width:15ch}
+.intro{max-width:58ch;color:var(--suave);margin:0 0 .8rem}
+.aviso{font-size:.88rem;color:var(--suave);max-width:62ch;margin:0 0 1.5rem}
+.stats{display:flex;flex-wrap:wrap;gap:2rem;margin:0;padding:1rem 0 0;border-top:1px solid var(--linea);list-style:none}
+.stats b{display:block;font:800 1.9rem/1 "Bricolage Grotesque",sans-serif}
+.stats span{font-size:.85rem;color:var(--suave)}
+
+.barra{position:sticky;top:3.5rem;z-index:40;background:var(--papel);border-bottom:1px solid var(--linea);padding:.75rem 0}
+.barra .wrap{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.barra input,.barra select{font:500 .9rem "Bricolage Grotesque",sans-serif;padding:.5rem .8rem;border:1px solid var(--linea);border-radius:8px;background:var(--blanco);color:var(--tinta)}
+.barra input{flex:1 1 200px;min-width:0}
+.filtros{display:flex;gap:.4rem;overflow-x:auto;flex:1 1 100%;padding-bottom:2px;scrollbar-width:none}
+.f{white-space:nowrap;font:600 .82rem "Bricolage Grotesque",sans-serif;background:var(--blanco);color:var(--tinta);border:1px solid var(--linea);border-radius:999px;padding:.35rem .85rem;cursor:pointer}
+.f[aria-pressed=true]{background:var(--tinta);color:var(--blanco);border-color:var(--tinta)}
+#cuenta{font-size:.85rem;color:var(--suave);margin:1rem 0 0}
+
+.sec-titulo{font-size:1.85rem;margin:2.8rem 0 0;padding:.75rem 1rem;background:var(--tinta);color:var(--blanco);border-radius:10px;display:flex;align-items:center;justify-content:space-between}
+.sec-titulo span{font-size:.85rem;font-weight:500;opacity:.8}
+
+.producto{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:2rem;padding:2.2rem 0;border-top:1px solid var(--linea)}
+.sec-titulo + .producto{border-top:none}
+.producto:target{background:#E6EEE8;outline:8px solid #E6EEE8}
+figure{margin:0;aspect-ratio:1;background:var(--blanco);border:1px solid var(--linea);border-radius:6px;display:grid;place-items:center;overflow:hidden;position:relative}
+figure img{width:100%;height:100%;object-fit:contain;padding:.75rem}
+.ico{font-size:3.4rem}
+.cat{position:absolute;left:.5rem;bottom:.5rem;font:600 .72rem "Bricolage Grotesque",sans-serif;background:var(--tinta);color:var(--blanco);padding:.15rem .55rem;border-radius:999px}
+h2{font-size:1.55rem;line-height:1.15;font-weight:700;letter-spacing:-.01em;margin:0 0 .45rem}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .9rem;margin-bottom:.8rem;font:500 .85rem "Bricolage Grotesque",sans-serif;color:var(--suave)}
+.estrellas{font-size:1.15rem;letter-spacing:.1em;line-height:1;background:linear-gradient(90deg,var(--ambar) var(--p),#C5CFCA var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
+.num{font-weight:700;color:var(--tinta)}
+.ideal{background:var(--blanco);border:1px solid var(--linea);border-radius:6px;padding:.1rem .5rem}
+.gama{font-weight:700;color:var(--verde)}
+.desc{margin:0 0 .8rem}
+.resena{border-left:3px solid var(--verde);padding-left:1rem;margin:0 0 1rem;font-style:italic}
+.resena strong{font:700 1rem "Bricolage Grotesque",sans-serif;font-style:normal}
+.puntos{display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem;margin-bottom:1.3rem}
+.puntos h3{font-size:.92rem;margin:0 0 .3rem}
+.puntos ul{list-style:none;margin:0;padding:0;font-size:.95rem;line-height:1.5}
+.puntos li{padding-left:1.3rem;position:relative;margin-bottom:.2rem}
+.pros li::before,.contras li::before{position:absolute;left:0;font-weight:700}
+.pros li::before{content:"+";color:var(--verde)}
+.contras li::before{content:"–";color:var(--rojo)}
+.btn{display:inline-block;background:var(--ambar);color:var(--tinta);font-weight:700;text-decoration:none;padding:.75rem 1.4rem;border-radius:999px;border:2px solid var(--tinta);cursor:pointer}
+.btn:hover{background:var(--tinta);color:var(--ambar)}
+.vacio{padding:3rem 0;color:var(--suave)}
+
+section.bloque{padding:3rem 0;border-top:1px solid var(--linea)}
+section.bloque h2{font-size:2rem;margin-bottom:1rem}
+.tabla{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--linea)}
+th{font:700 .85rem "Bricolage Grotesque",sans-serif;background:var(--blanco)}
+details{border-bottom:1px solid var(--linea);padding:.9rem 0}
+summary{cursor:pointer;font:700 1.05rem "Bricolage Grotesque",sans-serif}
+details p{margin:.6rem 0 0;color:var(--suave);max-width:70ch}
+footer{border-top:1px solid var(--linea);padding:2rem 0 5rem;font-size:.85rem;color:var(--suave)}
+footer p{max-width:72ch;margin:0 0 .5rem}
+
+.eco{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:1.2rem}
+.ec{background:var(--blanco);border:1px solid var(--linea);border-radius:8px;padding:1rem;display:flex;flex-direction:column;gap:.35rem}
+.ec h3{font-size:1rem;margin:0;line-height:1.25}
+.ec p{margin:0;font-size:.88rem;color:var(--suave);line-height:1.4}
+.ec small{font:600 .75rem "Bricolage Grotesque",sans-serif;color:var(--verde)}
+.ec .ln{margin-top:auto;padding-top:.4rem;font:600 .85rem "Bricolage Grotesque",sans-serif;display:flex;justify-content:space-between}
+.lead{max-width:62ch;color:var(--suave);margin:0 0 1rem}
+
+/* Asistente */
+.ia-abrir{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;background:var(--verde);color:var(--blanco);border:2px solid var(--tinta);padding:.75rem 1.25rem;border-radius:999px;font:700 .95rem "Bricolage Grotesque",sans-serif;cursor:pointer;box-shadow:0 6px 20px rgba(22,48,43,.22)}
+.ia-abrir:hover{background:var(--tinta)}
+.ia{position:fixed;bottom:5rem;right:1.25rem;z-index:1000;width:min(400px,calc(100vw - 2.5rem));height:560px;max-height:78vh;background:var(--blanco);border:2px solid var(--tinta);border-radius:14px;box-shadow:0 12px 32px rgba(22,48,43,.25);display:none;flex-direction:column;overflow:hidden}
+.ia.abierta{display:flex}
+.ia-cab{background:var(--tinta);color:var(--blanco);padding:.8rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.ia-cab p{margin:0;font:700 1rem "Bricolage Grotesque",sans-serif}
+.ia-cab small{display:block;font:400 .72rem "Bricolage Grotesque",sans-serif;opacity:.75}
+.ia-cab button{background:none;border:none;color:var(--blanco);font-size:1.3rem;cursor:pointer;padding:0 .3rem}
+.ia-men{flex:1;padding:1rem;overflow-y:auto;background:var(--papel);display:flex;flex-direction:column;gap:.7rem;font-size:.95rem;line-height:1.45}
+.msg{max-width:88%;padding:.6rem .85rem;border-radius:12px}
+.msg.bot{background:var(--blanco);border:1px solid var(--linea);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.user{background:var(--verde);color:var(--blanco);align-self:flex-end;border-bottom-right-radius:3px}
+.mini{display:flex;justify-content:space-between;gap:.6rem;align-items:baseline;border:1px solid var(--linea);border-radius:8px;padding:.45rem .6rem;margin-top:.45rem;font-size:.88rem;background:var(--papel)}
+.mini span{color:var(--suave);white-space:nowrap;font-size:.8rem}
+.chip{font:600 .78rem "Bricolage Grotesque",sans-serif;background:var(--papel);border:1px solid var(--tinta);color:var(--tinta);border-radius:999px;padding:.3rem .75rem;cursor:pointer;white-space:nowrap}
+.chip:hover{background:var(--ambar)}
+.ia-sug{padding:.5rem .75rem;border-top:1px solid var(--linea);display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+.ia-form{display:flex;border-top:1px solid var(--linea)}
+.ia-form input{flex:1;border:none;padding:.75rem .9rem;font:inherit;font-size:.95rem;outline:none;min-width:0}
+.ia-form button{background:var(--ambar);border:none;border-left:1px solid var(--linea);padding:0 1.1rem;font:700 .9rem "Bricolage Grotesque",sans-serif;cursor:pointer;color:var(--tinta)}
+.ia-nota{font-size:.7rem;color:var(--suave);padding:.35rem .9rem;border-top:1px solid var(--linea);margin:0;font-family:"Bricolage Grotesque",sans-serif}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:640px){.producto{grid-template-columns:1fr;gap:1.1rem}figure{max-width:200px}.puntos{grid-template-columns:1fr}.nav ul{gap:.9rem}.barra{top:3.5rem}.sec-titulo{font-size:1.4rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal"><div class="wrap">
+  <a class="marca" href="#">Café en casa</a>
+  <ul><li><a href="#productos">Productos</a></li><li><a href="#economico">Económico</a></li><li><a href="#guia">Guía rápida</a></li><li><a href="#faq">Preguntas</a></li></ul>
+</div></nav>
+
+<header class="hero wrap">
+  <h1>Todo para hacer buen café en casa</h1>
+  <p class="intro">Más de sesenta y cinco productos ordenados por categoría para cada método de preparación, con selección económica, opinión sincera y una guía rápida para elegir sin equivocarte.</p>
+  <p class="aviso">Los enlaces de esta página son de afiliado: si compras a través de ellos recibimos una pequeña comisión, sin coste extra para ti. Revisado en noviembre de 2026.</p>
+  <ul class="stats">
+    <li><b id="stN">68</b><span>productos analizados</span></li>
+    <li><b id="stC">9</b><span>categorías</span></li>
+    <li><b>6</b><span>métodos en la guía</span></li>
+  </ul>
+</header>
+
+<div class="barra"><div class="wrap">
+  <input type="search" id="buscar" placeholder="Buscar producto, método o marca…" aria-label="Buscar producto">
+  <select id="orden" aria-label="Ordenar por">
+    <option value="d">Ordenado por apartados</option><option value="r">Mejor valorados</option><option value="p">Precio: de menor a mayor</option>
+  </select>
+  <div class="filtros" id="filtros" role="group" aria-label="Categorías"></div>
+</div></div>
+
+<main class="wrap" id="productos">
+  <p id="cuenta" aria-live="polite"></p>
+  <div id="lista"></div>
+</main>
+
+<section class="bloque" id="economico"><div class="wrap">
+  <h2>Económico: buen café sin gastar mucho</h2>
+  <p class="lead">Productos de gama económica (€) con buena relación calidad-precio, ordenados por nuestra valoración. Los precios cambian: compruébalos en Amazon.</p>
+  <button type="button" class="btn" id="ecoVer">Filtrar catálogo económico</button>
+  <div class="eco" id="ecoLista"></div>
+</div></section>
+
+<section class="bloque" id="guia"><div class="wrap">
+  <h2>Guía rápida por método</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Método</th><th>Proporción</th><th>Molienda</th><th>Tiempo</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>Espresso</td><td>1:2 (18 g → 36 g)</td><td>Muy fina</td><td>25–30 s</td><td>Intenso, con crema</td></tr>
+      <tr><td>Cafetera italiana</td><td>Depósito lleno, sin prensar</td><td>Fina-media</td><td>4–5 min</td><td>Con cuerpo</td></tr>
+      <tr><td>V60 / filtro</td><td>1:16 (15 g → 250 ml)</td><td>Media</td><td>2:30–3:30</td><td>Limpio y aromático</td></tr>
+      <tr><td>AeroPress</td><td>1:15 aprox.</td><td>Media-fina</td><td>1:30–2:00</td><td>Limpio, versátil</td></tr>
+      <tr><td>Prensa francesa</td><td>1:15</td><td>Gruesa</td><td>4 min</td><td>Sedoso, con cuerpo</td></tr>
+      <tr><td>Cold brew</td><td>1:8 (concentrado)</td><td>Gruesa</td><td>8–12 h en frío</td><td>Dulce, sin acidez</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="bloque" id="faq"><div class="wrap">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Por dónde empiezo si no tengo nada?</summary><p>Un molinillo y una cafetera sencilla (AeroPress, V60 o italiana) mejoran más el café que una máquina cara con café molido de hace semanas.</p></details>
+  <details><summary>¿Qué importa más: la cafetera o el molinillo?</summary><p>El molinillo. Una molienda uniforme y reciente marca más diferencia que el método de extracción.</p></details>
+  <details><summary>¿Cada cuánto debo limpiar y descalcificar?</summary><p>Aclara a diario y limpia a fondo cada semana. Descalcifica cada uno o tres meses según la dureza del agua de tu zona.</p></details>
+  <details><summary>¿Cuánto dura el café en grano una vez abierto?</summary><p>Su mejor momento llega hasta unas cuatro semanas después del tueste. Guárdalo entero, en un recipiente opaco y hermético.</p></details>
+  <details><summary>¿Las valoraciones son de Amazon?</summary><p>No. Son nuestra puntuación editorial sobre calidad, durabilidad y relación calidad-precio. Consulta siempre precio y opiniones actualizadas en Amazon.</p></details>
+</div></section>
+
+<footer class="wrap">
+  <p>Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplan los requisitos aplicables.</p>
+  <p>Las valoraciones y opiniones son nuestras. Los precios y la disponibilidad pueden cambiar: compruébalos en Amazon antes de comprar.</p>
+</footer>
+
+<button class="ia-abrir" id="iaAbrir" aria-expanded="false" aria-controls="ia">☕ Asistente barista</button>
+<aside class="ia" id="ia" aria-label="Asistente barista">
+  <div class="ia-cab"><p>Asistente barista<small>Respuestas automáticas basadas en esta guía</small></p><button id="iaCerrar" aria-label="Cerrar chat">&times;</button></div>
+  <div class="ia-men" id="men" role="log" aria-live="polite"></div>
+  <div class="ia-sug" id="sug"></div>
+  <form class="ia-form" id="form"><input id="inp" placeholder="Escribe tu duda sobre café…" autocomplete="off" required aria-label="Tu pregunta"><button>Enviar</button></form>
+  <p class="ia-nota">Orientativo. No es un asesor profesional.</p>
+</aside>
+
+<script>
+/* ===== CONFIGURACIÓN: cambia por tu ID de Amazon Asociados ===== */
+const TAG="tu-tag-21", DOM="amazon.es";
+
+/* Categorías en orden de aparición */
+const CATS={
+  todos:["Todos","✨"],
+  eco:["Económico","💶"],
+  cafeteras:["Cafeteras","☕"],
+  molinillos:["Molinillos","⚙️"],
+  espresso:["Espresso","🔧"],
+  filtro:["Filtro","💧"],
+  leche:["Leche","🥛"],
+  grano:["Café y agua","🫘"],
+  mant:["Cuidado","🧼"],
+  servicio:["Tazas","🥃"],
+  acc:["Accesorios","🧰"]
+};
+
+/* 68 PRODUCTOS ORDENADOS POR APARTADO Y GAMA DE PRECIO (p: 1=€, 2=€€, 3=€€€) */
+const P=[
+  /* ==================== 1. CAFETERAS (14) ==================== */
+  {id:"moka3",q:"Bialetti Moka Express 3 tazas",c:"cafeteras",n:"Bialetti Moka Express (3 tazas)",p:1,r:4.5,t:"Una o dos personas",d:"La moka italiana clásica en tamaño compacto para unos 130 ml de café intenso.",o:"Si eres uno o dos en casa, aprovecha mejor el café que la de 6 tazas y calienta en apenas tres minutos.",y:["Tamaño ideal para dos","Barata y duradera","Repuestos universales"],x:["Inducción solo con adaptador"]},
+  {id:"moka",a:"B00004R93U",c:"cafeteras",n:"Bialetti Moka Express (6 tazas)",p:1,r:4.5,t:"Café intenso de diario",d:"El clásico de aluminio fundido con válvula de seguridad. Unos 300 ml de café con cuerpo.",o:"Nunca falla. Llena la base con agua ya caliente antes de ponerla al fuego y evitarás el sabor a quemado.",y:["Café intenso y con cuerpo","Repuestos fáciles de encontrar","Dura décadas"],x:["Inducción solo con adaptador","No apta para lavavajillas"]},
+  {id:"mokaacero",q:"Bialetti Venus cafetera italiana inducción 6 tazas",c:"cafeteras",n:"Bialetti Venus (acero para inducción)",p:1,r:4.5,t:"Italiana para inducción",d:"Cafetera italiana de acero inoxidable 18/10 con base compatible con inducción, gas y vitrocerámica.",o:"La alternativa directa a la Moka tradicional si tienes placa de inducción, sin necesitar discos adaptadores.",y:["Apta para inducción","Más resistente a golpes que el aluminio"],x:["Pesa algo más","Tarda un poco más en calentar"]},
+  {id:"brikka",q:"Bialetti Brikka 4 tazas",c:"cafeteras",n:"Bialetti Brikka (4 tazas)",p:1,r:4,t:"Italiana con más crema",d:"Italiana con válvula de presión en la columna central que genera una capa de crema densa.",o:"Un paso más allá de la Moka si te gusta el café corto y con textura parecida al espresso.",y:["Crema más densa","Mismo manejo que la Moka"],x:["Más exigente con el punto de molienda"]},
+  {id:"brazil",q:"Bodum Brazil prensa francesa 350 ml",c:"cafeteras",n:"Bodum Brazil (prensa francesa 0,35 L)",p:1,r:4,t:"Una taza al día",d:"Prensa francesa pequeña de borosilicato y estructura ligera, ideal para una o dos tazas.",o:"Perfecta si solo tomas café tú: barata, ocupa poquísimo y se lava en segundos.",y:["Compacta y ligera","Muy fácil de usar"],x:["Estructura de plástico"]},
+  {id:"bodum",a:"B00005LM0R",c:"cafeteras",n:"Bodum Chambord (1 L / 8 tazas)",p:1,r:4.5,t:"Varias personas",d:"Prensa francesa clásica con jarra de vidrio de borosilicato, marco cromado y filtro de malla de acero.",o:"Nuestra favorita para el desayuno del fin de semana: café molido grueso, cuatro minutos y bajar el émbolo.",y:["Varias tazas a la vez","Sin filtros de papel","Diseño clásico"],x:["Deja algo de poso fino"]},
+  {id:"aeropress",a:"B0047BI3S4",c:"cafeteras",n:"AeroPress Original",p:1,r:5,t:"Viajes y recetas",d:"Extracción por inmersión y presión suave en polipropileno libre de BPA. Prepara de 1 a 3 tazas.",o:"La cafetera más versátil y agradecida: café limpio en dos minutos y se limpia en diez segundos.",y:["Limpieza en segundos","Casi indestructible","Admite mil recetas"],x:["Lenta para más de dos tazas"]},
+  {id:"aeropressgo",q:"AeroPress Go cafetera viaje",c:"cafeteras",n:"AeroPress Go (edición viaje)",p:1,r:4.5,t:"Oficina, camping y maleta",d:"Versión compacta de la AeroPress que guarda todos sus accesorios dentro de su propia taza con tapa.",o:"Si viajas o haces café en la oficina, es el kit más práctico y compacto que existe.",y:["Todo cabe dentro de la taza","Misma calidad que la Original"],x:["Capacidad ligeramente menor"]},
+  {id:"nanopresso",q:"Wacaco Nanopresso cafetera espresso portátil",c:"cafeteras",n:"Wacaco Nanopresso",p:2,r:4.5,t:"Espresso sin enchufe",d:"Cafetera espresso manual portátil capaz de alcanzar hasta 18 bares mediante bombeo con una mano.",o:"Sorprende la crema que saca en mitad de la montaña o en un hotel usando solo agua caliente.",y:["No necesita electricidad","Compacta y ligera"],x:["Hay que limpiar varias piezas pequeñas"]},
+  {id:"dedica",a:"B06WGTZ874",c:"cafeteras",n:"De'Longhi Dedica Style EC685.M",p:2,r:4.5,t:"Primer espresso en casa",d:"Espresso compacta de 15 cm de ancho, sistema Thermoblock (lista en 40 s), 15 bares y vaporizador.",o:"La opción más equilibrada por precio y tamaño. Con café recién molido saca una crema sorprendente.",y:["Cabe en cualquier cocina","Lista en 40 segundos","Buena vaporización"],x:["Tamper de plástico muy básico"]},
+  {id:"gaggia",q:"Gaggia Classic Evo Pro cafetera espresso",c:"cafeteras",n:"Gaggia Classic Evo Pro",p:3,r:5,t:"Espresso tradicional duradero",d:"Cafetera espresso con caldera de latón, portafiltros profesional de 58 mm y válvula solenoide de tres vías.",o:"Un clásico eterno para quienes quieren aprender espresso de verdad y tener máquina para toda la vida.",y:["Portafiltros estándar de 58 mm","Muy fácil de reparar y mejorar"],x:["Requiere dominar el surfeo de temperatura"]},
+  {id:"bambino",q:"Sage Bambino cafetera espresso",c:"cafeteras",n:"Sage Bambino",p:3,r:5,t:"Espresso serio sin esperar",d:"Cafetera espresso compacta con calentamiento ThermoJet en 3 segundos, preinfusión a baja presión y vaporizador potente.",o:"Juega en otra liga frente a las espresso básicas: temperatura estable desde el primer segundo y vapor seco para latte art.",y:["Lista en 3 segundos","Preinfusión real","Vaporizador potente"],x:["Precio superior a las de entrada"]},
+  {id:"magnifica",a:"B00400OMU0",c:"cafeteras",n:"De'Longhi Magnifica S",p:3,r:4.5,t:"Café automático diario",d:"Superautomática con molinillo cónico de 13 niveles, uno o dos cafés al instante y espumador manual.",o:"Compra redonda si tomáis varios cafés al día y queréis recién molido pulsando un solo botón.",y:["Muele y prepara en un toque","Fiable y fácil de mantener"],x:["Ocupa espacio","Ruidosa al moler"]},
+  {id:"moccamaster",a:"B07W46BX31",c:"cafeteras",n:"Moccamaster KBGV Select",p:3,r:5,t:"Jarra de filtro cada mañana",d:"Cafetera de filtro hecha a mano en Países Bajos, certificada por la SCA. Agua a 92–96 °C y 1,25 L en 6 minutos.",o:"Extrae con precisión de barista pulsando un interruptor. Olvídate del café tibio o quemado de las máquinas baratas.",y:["Temperatura perfecta y estable","Hecha para durar décadas"],x:["Precio elevado"]},
+
+  /* ==================== 2. MOLINILLOS (8) ==================== */
+  {id:"skerton",q:"Hario Skerton Plus molinillo manual",c:"molinillos",n:"Hario Skerton Plus",p:1,r:4,t:"Primer molinillo manual",d:"Molinillo manual japonés con muelas cerámicas y depósito de vidrio de 100 g, ajustable para filtro o prensa.",o:"El camino más barato a moler en casa. Más lento que uno de acero, pero infinitamente superior a cualquier molinillo de cuchillas.",y:["Muy económico","Depósito de vidrio con tapa"],x:["Más lento al moler","Algo de holgura en molienda gruesa"]},
+  {id:"porlex",q:"Porlex Mini II molinillo café",c:"molinillos",n:"Porlex Mini II",p:2,r:4.5,t:"Compañero de AeroPress",d:"Molinillo japonés cilíndrico de acero inoxidable con muelas cerámicas diseñado para encajar dentro del émbolo de la AeroPress.",o:"Si viajas con AeroPress, es el dúo más compacto que puedes meter en una mochila.",y:["Cabe dentro de la AeroPress","Cuerpo de acero resistente"],x:["Capacidad justa de 20 g"]},
+  {id:"c2",a:"B0833SDN8M",c:"molinillos",n:"Timemore Chestnut C2 (manual)",p:2,r:5,t:"Mejor molienda por poco dinero",d:"Molinillo manual de aluminio con doble rodamiento y muelas cónicas de acero inoxidable, ajuste paso a paso.",o:"Moler justo antes de preparar es el mayor salto de calidad. Muele 18 g en unos 30 segundos sin esfuerzo.",y:["Molienda rápida y homogénea","Metálico, silencioso y portátil"],x:["Capacidad máxima de unos 25 g"]},
+  {id:"kingrinder",q:"KINGrinder K6 molinillo manual",c:"molinillos",n:"KINGrinder K6",p:2,r:5,t:"Manual válido para espresso y filtro",d:"Molinillo manual con ajuste exterior de 60 clics por vuelta (16 micras) y muelas heptagonales de acero de 48 mm.",o:"Uno de los pocos molinillos de precio medio con precisión real para ajustar espresso sin volverte loco.",y:["Ajuste exterior muy preciso","Válido desde espresso hasta prensa"],x:["Algo pesado en mano"]},
+  {id:"encore",a:"B07Q7H6M9H",c:"molinillos",n:"Baratza Encore",p:2,r:4.5,t:"Primer molinillo eléctrico",d:"Eléctrico con muelas cónicas de acero de 40 mm y 40 niveles, pensado para filtro, prensa, AeroPress e italiana.",o:"El estándar para empezar en serio. Muele uniforme y la marca vende absolutamente todos los repuestos.",y:["40 niveles de molienda","Muelas duraderas y reemplazables"],x:["No sirve para espresso fino","Algo ruidoso"]},
+  {id:"fellowode",q:"Fellow Ode Gen 2 molinillo café",c:"molinillos",n:"Fellow Ode Gen 2",p:3,r:5,t:"Eléctrico top para filtro",d:"Molinillo eléctrico de muelas planas de 64 mm, ionizador antiestática, apagado automático y diseño minimalista.",o:"Si solo tomas filtro, V60, AeroPress o prensa francesa, ofrece una claridad de sabor espectacular y casi no hace ruido.",y:["Muelas planas de 64 mm","Cero retención y muy silencioso"],x:["No está diseñado para espresso"]},
+  {id:"comandante",q:"Comandante C40 MK4 molinillo manual",c:"molinillos",n:"Comandante C40 MK4",p:3,r:5,t:"Molienda de referencia",d:"Molinillo manual alemán con muelas Nitro Blade de acero y ajuste muy preciso para todos los métodos.",o:"Es el que compra quien ya sabe lo que quiere. Constancia de molienda difícil de superar a mano.",y:["Uniformidad excelente","Acabado muy cuidado"],x:["Precio alto para un manual"]},
+  {id:"mignon",q:"Eureka Mignon Manuale molinillo espresso",c:"molinillos",n:"Eureka Mignon Manuale",p:3,r:5,t:"Eléctrico dedicado para espresso",d:"Molinillo eléctrico italiano con muelas planas de 50 mm, regulación micrométrica continua y muy silencioso.",o:"Si tienes cafetera espresso, este molinillo marca más diferencia que cambiar de cafetera.",y:["Ajuste micrométrico sin pasos","Muy silencioso y robusto"],x:["Pensado solo para espresso"]},
+
+  /* ==================== 3. ESPRESSO (8) ==================== */
+  {id:"wdt",a:"B082515262",c:"espresso",n:"Distribuidor WDT de agujas",p:1,r:4.5,t:"Espresso más homogéneo",d:"Agujas de acero de 0,4 mm para remover el café en el portafiltros y deshacer grumos antes de prensar.",o:"Cinco segundos antes de prensar mejoran la extracción y reducen las salpicaduras en portafiltros sin fondo.",y:["Elimina grumos al instante","Incluye soporte"],x:["Agujas delicadas"]},
+  {id:"aro",q:"aro dosificador magnetico espresso 51mm 58mm",c:"espresso",n:"Aro dosificador magnético (dosing funnel)",p:1,r:4.5,t:"No derramar café al moler",d:"Anillo de aluminio con imanes que se acopla sobre el portafiltros para dosificar y remover con WDT sin tirar café fuera.",o:"Evita desperdiciar café en la encimera cada mañana y te permite usar el WDT con total comodidad.",y:["Imanes firmes","Encimera siempre limpia"],x:["Hay que elegir la medida exacta del filtro"]},
+  {id:"knock",q:"knock box espresso cajón de posos",c:"espresso",n:"Cajón de posos (knock box)",p:1,r:4,t:"Cocina ordenada",d:"Cajón con barra central de goma para golpear el portafiltros y vaciar la pastilla sin ensuciar.",o:"Un accesorio humilde que se agradece cada mañana para no ir al cubo de basura con el portafiltros caliente.",y:["Vaciado limpio y rápido","Base antideslizante"],x:["Ocupa sitio en la encimera"]},
+  {id:"alfombrilla",q:"alfombrilla prensado tamper silicona espresso",c:"espresso",n:"Alfombrilla de prensado de silicona",p:1,r:4.5,t:"Proteger la encimera",d:"Base de silicona alimentaria con borde de apoyo para apoyar el portafiltros al prensar sin rayar la mesa.",o:"Barata, lavable y evita que el portafiltros resbale cuando haces fuerza con el tamper.",y:["Protege encimera y boquillas","Antideslizante"],x:["Atrae algo de polvo de café"]},
+  {id:"puckscreen",q:"puck screen filtro malla espresso 58 mm",c:"espresso",n:"Puck screen (malla dispersora)",p:1,r:4.5,t:"Ducha limpia y agua uniforme",d:"Disco fino de malla de acero inoxidable que se coloca encima del café prensado antes de encajar el portafiltros.",o:"Reparte mejor el agua y mantiene la ducha de la cafetera impecable sin restos de café pegados.",y:["Mantiene limpia la ducha","Extracción más pareja"],x:["Hay que acordarse de no tirarlo con los posos"]},
+  {id:"ims",q:"cesta filtro precision IMS 51mm 58mm espresso",c:"espresso",n:"Cesta de precisión IMS",p:2,r:5,t:"Mejorar cualquier cafetera espresso",d:"Filtro de acero pulido con perforaciones láser uniformes para una extracción más limpia y dulce que las cestas de serie.",o:"Es la mejora con mejor relación calidad-precio para una Dedica o Gaggia: saca mucha más dulzura del grano.",y:["Perforaciones micrométricas uniformes","Pastilla seca y fácil de vaciar"],x:["Exige buena molienda"]},
+  {id:"tamper",a:"B078X4L31V",c:"espresso",n:"Tamper calibrado Normcore V4",p:2,r:5,t:"Prensado siempre recto",d:"Prensador de acero con doble resorte que da siempre la misma presión nivelada (disponible en 51, 54 y 58 mm).",o:"Prensar torcido provoca canalizaciones y café agrio. La guía superior apoya en el borde y lo deja recto siempre.",y:["Evita prensados inclinados","Muelles de presión intercambiables"],x:["Debes elegir el diámetro exacto de tu filtro"]},
+  {id:"portafiltro",q:"portafiltros sin fondo bottomless 51mm 58mm",c:"espresso",n:"Portafiltros sin fondo (bottomless)",p:2,r:4.5,t:"Aprender y mejorar extracción",d:"Portafiltros abierto por debajo que deja ver cómo sale el espresso directamente desde la cesta.",o:"Es el mejor profesor de espresso: ves al instante si estás prensando mal o si la molienda necesita ajuste.",y:["Diagnóstico visual inmediato","Incluye cesta no presurizada"],x:["Si hay canalización puede salpicar"]},
+
+  /* ==================== 4. FILTRO (15) ==================== */
+  {id:"melitta",q:"Melitta cono filtro café 1x2 plástico",c:"filtro",n:"Melitta 1x2 (cono de filtro)",p:1,r:4,t:"Filtro al precio más bajo",d:"Cono de plástico para filtros estándar 1x2 que se apoya directamente sobre la taza o la jarra.",o:"La forma más barata de probar el café de filtro. Fácil de repetir, aunque con menos control que un V60.",y:["Muy económico","Filtros fáciles de encontrar"],x:["Menos control del flujo"]},
+  {id:"v60",a:"B000P4D5HG",c:"filtro",n:"Hario V60 02 de cerámica",p:1,r:4.5,t:"Matices en tueste ligero",d:"Cono de porcelana japonesa con estrías en espiral y orificio amplio para controlar el flujo.",o:"Imbatible para cafés de tueste ligero o medio sin amargor. Precaliéntalo antes con un poco de agua.",y:["Extracción limpia y llena de matices","Retiene bien el calor"],x:["Requiere práctica","Frágil ante golpes"]},
+  {id:"filtros",a:"B001802PIQ",c:"filtro",n:"Filtros de papel V60 02 (100 uds.)",p:1,r:4.5,t:"Repuesto para V60",d:"Filtros cónicos de papel blanqueado con oxígeno, a medida de los conos V60 de 1 a 4 tazas.",o:"Si los enjuagas con agua caliente no dejan sabor a papel y la taza sale cristalina.",y:["Ajuste perfecto","Muy económicos por taza"],x:["Un solo uso"]},
+  {id:"filtroaero",q:"filtros de papel AeroPress 350 unidades",c:"filtro",n:"Filtros AeroPress (350 uds.)",p:1,r:4.5,t:"Repuesto AeroPress",d:"Pack grande de filtros de papel circulares compatibles con AeroPress Original y Go.",o:"Cuestan céntimos por taza. Compras una caja y tienes para todo el año.",y:["Coste por taza muy bajo","Café muy limpio sin sedimentos"],x:["Un solo uso"]},
+  {id:"prismo",q:"Fellow Prismo accesorio AeroPress",c:"filtro",n:"Fellow Prismo para AeroPress",p:2,r:4.5,t:"Café tipo espresso en AeroPress",d:"Boquilla con válvula accionada por presión y filtro metálico reutilizable para preparar concentrados con crema en AeroPress.",o:"Además de permitir recetas intensas sin filtros de papel, evita que gotee café mientras preparas en método estándar.",y:["Sin filtros de papel","Evita el goteo antes de presionar"],x:["Deja pasar algo más de aceites"]},
+  {id:"switch",q:"Hario V60 Switch 02 cafetera inmersión",c:"filtro",n:"Hario V60 Switch 02",p:2,r:5,t:"Lo mejor de V60 e inmersión",d:"Cono V60 de vidrio con base de silicona y válvula de cierre que permite combinar inmersión y goteo.",o:"Es nuestro cono favorito hoy en día: puedes dejar infusionar el café dos minutos y abrir la válvula para filtrarlo limpio.",y:["Resultados súper consistentes","Combina inmersión y filtro"],x:["Más pesado que un V60 normal"]},
+  {id:"clever",q:"Clever Dripper cafetera filtro inmersión",c:"filtro",n:"Clever Dripper",p:1,r:4.5,t:"Filtro sin técnica de vertido",d:"Cafetera de inmersión con válvula inferior que se abre automáticamente al apoyarla sobre la taza.",o:"Echas agua y café, esperas tres minutos, la pones encima de la taza y listo. Imposible hacerlo mal.",y:["Cero técnica necesaria","Usa filtros estándar Melitta"],x:["Cuerpo de plástico Tritan"]},
+  {id:"server",q:"Hario V60 Range Server jarra vidrio 600 ml",c:"filtro",n:"Jarra de servicio Hario V60 (600 ml)",p:1,r:4.5,t:"Servir varias tazas de filtro",d:"Jarra de vidrio resistente al calor con tapa hermética de silicona compatible con cualquier cono V60 o Kalita.",o:"Permite oxigenar el café haciendo girar la jarra y mantiene la temperatura mientras sirves.",y:["Vidrio borosilicato resistente","Compatible con microondas"],x:["Requiere cuidado al lavarla"]},
+  {id:"coldbotella",q:"botella cold brew 1 litro filtro",c:"filtro",n:"Botella cold brew (1 L)",p:1,r:4,t:"Cold brew sin gastar",d:"Botella de vidrio con filtro interior y tapa hermética para infusionar café en la nevera.",o:"Alternativa más económica que la Mizudashi y cabe perfectamente en la puerta de la nevera.",y:["Muy económica","Tapa hermética"],x:["Filtro menos fino"]},
+  {id:"mizudashi",a:"B00FFLY64U",c:"filtro",n:"Hario Mizudashi Cold Brew (1 L)",p:1,r:4.5,t:"Café frío en verano",d:"Jarra de vidrio con filtro permanente de malla fina para infusionar en la nevera durante 8 a 12 horas.",o:"Casi sin acidez ni amargor: dulce, suave y refrescante, y aguanta días en la nevera.",y:["Suave y naturalmente dulce","Filtro reutilizable muy fino"],x:["Requiere planificar 8 horas"]},
+  {id:"bascecon",q:"báscula cocina digital 0,1 g temporizador café",c:"filtro",n:"Báscula digital económica 0,1 g",p:1,r:4,t:"Pesar sin gastar mucho",d:"Báscula de cocina con sensibilidad de 0,1 g (hasta 500 g) y temporizador integrado.",o:"No tiene la estética de las marcas de especialidad, pero cumple de sobra para empezar a pesar dosis.",y:["Precisión suficiente","Muy barata"],x:["Respuesta más lenta","Poco resistente al agua"]},
+  {id:"kalita",q:"Kalita Wave 185 dripper acero",c:"filtro",n:"Kalita Wave 185",p:2,r:4.5,t:"Filtro más indulgente",d:"Dripper de acero de fondo plano con tres orificios y filtros de ondas para una extracción muy uniforme.",o:"Más fácil de repetir que un V60: el vertido importa menos y el resultado es muy constante.",y:["Resultado muy constante","Perdona errores de vertido"],x:["Necesita sus filtros propios"]},
+  {id:"chemex",q:"Chemex 6 tazas cafetera",c:"filtro",n:"Chemex (6 tazas)",p:2,r:4.5,t:"Café limpio para compartir",d:"Jarra de vidrio de borosilicato con collar de madera y filtro grueso que retiene aceites y sedimentos.",o:"Un café brillante y muy limpio; además es un objeto precioso que se queda en la mesa.",y:["Taza cristalina","Diseño atemporal"],x:["Filtros más caros","Frágil"]},
+  {id:"buono",a:"B0091QO3GJ",c:"filtro",n:"Hervidor cuello de cisne Hario Buono (1,2 L)",p:2,r:4.5,t:"Vertido controlado",d:"Acero inoxidable con boquilla fina y curva para controlar velocidad y dirección del chorro. Apto para inducción.",o:"Con un hervidor normal el agua cae de golpe y remueve la cama de café. Con este se nota en la taza.",y:["Control total del flujo","Compatible con inducción y gas"],x:["No es eléctrico"]},
+  {id:"scale",a:"B003W0P2SA",c:"filtro",n:"Báscula Hario V60 Drip Scale",p:2,r:4.5,t:"Repetir siempre la receta",d:"Báscula de 0,1 g (hasta 200 g) con temporizador en la misma pantalla.",o:"Pasar de medir a ojo a pesar es el truco más sencillo para un café igual de bueno cada día.",y:["Precisión de 0,1 g","Cronómetro integrado"],x:["Tarda un instante en estabilizarse"]},
+  {id:"stagg",q:"Fellow Stagg EKG hervidor electrico cuello cisne",c:"filtro",n:"Fellow Stagg EKG (eléctrico con control °C)",p:3,r:5,t:"Temperatura exacta grado a grado",d:"Hervidor eléctrico de cuello de cisne con selector digital de temperatura (40–100 °C) y función de mantenimiento durante 60 min.",o:"Permite ajustar 96 °C para tuestes ligeros o 88 °C para tuestes oscuros sin esperar ni usar termómetro.",y:["Control grado a grado","Vertido muy equilibrado"],x:["Precio alto"]},
+  {id:"acaia",q:"Acaia Lunar báscula espresso",c:"filtro",n:"Acaia Lunar",p:3,r:4.5,t:"Báscula profesional",d:"Báscula con app, resistente al agua y con respuesta casi instantánea, pensada para espresso y filtro.",o:"Es un lujo, pero si te tomas el café en serio la rapidez de lectura se agradece muchísimo.",y:["Respuesta muy rápida","Resistente al agua"],x:["Precio elevado"]},
+
+  /* ==================== 5. LECHE (5) ==================== */
+  {id:"espmanual",q:"espumador de leche manual batería acero",c:"leche",n:"Espumador de leche de mano",p:1,r:4,t:"Espuma ligera barata",d:"Varilla a pilas de acero inoxidable para espumar leche caliente o fría directamente en la taza.",o:"La opción más barata para un capuchino ligero. No iguala a un vaporizador, pero sorprende por lo que cuesta.",y:["Precio mínimo","Ocupa muy poco"],x:["Espuma menos densa","Necesita pilas"]},
+  {id:"jarraeco",q:"jarra espumar leche acero inoxidable 350 ml",c:"leche",n:"Jarra de acero para leche (350 ml)",p:1,r:4,t:"Cortados y capuchinos",d:"Jarra de acero inoxidable con pico vertedor y escala interior para texturizar o calentar leche.",o:"Para empezar con vaporizador no hace falta gastar más: importan un pico bien formado y el tamaño justo.",y:["Barata y resistente","Tamaño ideal para una taza"],x:["Acero más fino que las profesionales"]},
+  {id:"jarra",a:"B074746X2K",c:"leche",n:"Jarra barista Motta Europa (500 ml)",p:1,r:4.5,t:"Latte art",d:"Jarra italiana de acero 18/10 reforzado con pico preciso para texturizar leche.",o:"El pico afilado controla el hilo de leche mejor que las genéricas, y el acero grueso transmite la temperatura.",y:["Pico pensado para latte art","Resistente y apta para lavavajillas"],x:["500 ml es grande para un solo cortado"]},
+  {id:"frother",a:"B001V7837E",c:"leche",n:"Espumador eléctrico Bialetti",p:1,r:4.5,t:"Capuchino sin máquina",d:"Espumador automático antiadherente con dos batidores para espuma densa o leche caliente en unos 80 s.",o:"Si usas italiana o filtro y echas de menos el capuchino de cafetería, lo resuelve sin esfuerzo.",y:["Espuma densa y brillante","Muy silencioso"],x:["La base no va en lavavajillas"]},
+  {id:"subminimal",q:"Subminimal NanoFoamer espumador leche",c:"leche",n:"Subminimal NanoFoamer",p:2,r:4.5,t:"Microespuma sedosa sin vaporizador",d:"Espumador de mano de alta velocidad con rejillas intercambiables capaz de crear microespuma apta para latte art.",o:"El único espumador portátil que consigue leche sedosa y brillante en lugar de burbujas grandes.",y:["Textura real de cafetería","Fácil de aclarar bajo el grifo"],x:["Necesita calentar la leche aparte"]},
+
+  /* ==================== 6. CAFÉ Y AGUA (5) ==================== */
+  {id:"brita",q:"Brita Marella jarra filtro agua",c:"grano",n:"Jarra filtrante Brita Marella",p:1,r:4,t:"Mejorar el agua del café",d:"Jarra con filtro que reduce cloro y parte de la cal, mejorando el sabor y alargando la vida de la cafetera.",o:"El café es más de un 98 % agua: filtrarla se nota al instante en el aroma y reduce la cal.",y:["Mejor sabor en taza","Menos cal en la máquina"],x:["Hay que cambiar el cartucho cada mes"]},
+  {id:"airscape",q:"Planetary Design Airscape bote cafe acero",c:"grano",n:"Bote hermético Airscape (acero)",p:2,r:4.5,t:"Guardar bolsas de 500 g o 1 kg",d:"Recipiente de acero inoxidable con émbolo interior que expulsa el aire fuera antes de cerrar la tapa.",o:"Súper robusto y rápido de abrir cada mañana; expulsa el oxígeno sin depender de juntas de vacío delicadas.",y:["Muy duradero y sin piezas frágiles","Expulsa el aire al bajar el émbolo"],x:["Ocupa más altura en el armario"]},
+  {id:"especialidad",q:"café de especialidad en grano 1 kg tueste natural",c:"grano",n:"Café de especialidad en grano",p:2,r:4.5,t:"Ingrediente número uno",d:"Café 100 % arábica, tueste natural y fecha de tueste visible: la base de todo lo demás.",o:"Ningún accesorio compensa un café viejo. Fíjate en la fecha de tueste y compra poca cantidad cada vez.",y:["Mucho más aroma y matices","Fecha de tueste visible"],x:["Más caro que el supermercado"]},
+  {id:"atmos",a:"B018W27742",c:"grano",n:"Bote al vacío Fellow Atmos (0,7 L)",p:2,r:4.5,t:"Conservar el grano",d:"Recipiente de acero opaco con bomba de vacío integrada en la tapa para frenar la oxidación.",o:"De nada sirve comprar café recién tostado si lo dejas en una bolsa abierta. Aquí mantiene aroma semanas.",y:["Vacío real sin accesorios","Bloquea luz y humedad"],x:["No apto para café molido"]},
+  {id:"peakwater",q:"Peak Water jarra filtrante cafe",c:"grano",n:"Jarra filtrante Peak Water",p:2,r:4.5,t:"Ajustar dureza del agua para café",d:"Jarra filtrante diseñada por baristas con dial regulable para ajustar los minerales exactos del agua según tu zona.",o:"Si vives en una zona con agua muy dura o muy blanda, transforma el equilibrio de acidez y dulzor del café.",y:["Permite regular los minerales","Tiras de test incluidas"],x:["Filtros específicos más caros"]},
+
+  /* ==================== 7. CUIDADO (4) ==================== */
+  {id:"juntas",q:"junta silicona filtro Bialetti Moka 6 tazas",c:"mant",n:"Juntas de silicona y filtro para Bialetti",p:1,r:4.5,t:"Dejar la Moka como nueva",d:"Recambio de juntas de silicona alimentaria y placa filtrante para cafeteras italianas.",o:"La silicona dura mucho más que el caucho original, sella mejor y no coge olores con el tiempo.",y:["No se reseca ni endurece","Sella con menos esfuerzo"],x:["Comprueba el número de tazas de tu Moka"]},
+  {id:"cepillo_grupo",q:"cepillo limpieza grupo cafetera espresso",c:"mant",n:"Cepillo curvo para grupo de espresso",p:1,r:4.5,t:"Limpiar la ducha tras cada uso",d:"Cepillo con cabezal angulado de cerdas rígidas y cuchara dosificadora en el mango para limpiar la junta del grupo.",o:"Evita que se quemen restos de café en la goma del portafiltros y alarga la vida de la junta.",y:["Cabezal angulado para no quemarte","Muy económico"],x:["Cerdas firmes para uso exclusivo en grupo"]},
+  {id:"cafiza",q:"Urnex Cafiza limpiador cafetera espresso",c:"mant",n:"Urnex Cafiza (limpiador de grupo)",p:1,r:4.5,t:"Limpieza semanal",d:"Detergente en polvo para eliminar aceites y residuos del circuito, duchas y portafiltros.",o:"Un café que sabe rancio suele ser una máquina sucia. Un contralavado semanal lo evita por completo.",y:["Elimina aceites rancios","Rinde decenas de limpiezas"],x:["Solo para uso periódico"]},
+  {id:"durgol",q:"Durgol Swiss Espresso descalcificador",c:"mant",n:"Durgol Swiss Espresso",p:1,r:4.5,t:"Descalcificar",d:"Descalcificador líquido de bajo olor para cafeteras automáticas, cápsulas y espresso.",o:"Descalcificar a tiempo es lo que más alarga la vida de la resistencia y la bomba de la máquina.",y:["Fácil de dosificar","Bajo olor y acción rápida"],x:["Aclarado abundante necesario"]},
+
+  /* ==================== 8. TAZAS (4) ==================== */
+  {id:"tazas_esp",q:"tazas espresso porcelana gruesa 60 ml",c:"servicio",n:"Tazas de espresso de porcelana gruesa",p:1,r:4.5,t:"Espresso caliente más tiempo",d:"Set de tazas de porcelana vitrificada de pared gruesa y fondo redondeado para conservar la crema.",o:"Si precalientas la taza encima de la cafetera, la pared gruesa mantiene el espresso a temperatura perfecta.",y:["Conservan muy bien el calor","Fondo curvo que ayuda a la crema"],x:["Aptas solo para café solo o cortado"]},
+  {id:"pavina",q:"Bodum Pavina vasos doble pared 250 ml",c:"servicio",n:"Vasos Bodum Pavina (doble pared)",p:1,r:4.5,t:"Servir con estilo",d:"Vasos de vidrio de borosilicato de doble pared que aíslan el calor y no queman al tacto.",o:"Con ellos el café se ve espectacular y se mantiene caliente más tiempo. Un detalle que se nota.",y:["Aíslan el calor","Aptos para lavavajillas"],x:["Vidrio ligero, frágiles ante golpes"]},
+  {id:"loveramics",q:"Loveramics Egg taza capuchino 200 ml",c:"servicio",n:"Taza capuchino Loveramics Egg (200 ml)",p:2,r:5,t:"Capuchino y latte art",d:"Taza oficial del campeonato mundial de latte art, fabricada en porcelana de alta densidad con interior redondeado.",o:"Su curvatura interior hace que la leche y la crema se integren solas al verter. Una gozada en la mano.",y:["Forma perfecta para latte art","Porcelana gruesa de cafetería"],x:["Precio por unidad superior"]},
+  {id:"termo_viaje",q:"Kinto Travel Tumbler 350 ml termo café",c:"servicio",n:"Termo de viaje Kinto Travel Tumbler",p:2,r:5,t:"Café para llevar sin sabor a metal",d:"Termo de acero inoxidable con doble pared al vacío, tapa antiderrame y boquilla cómoda sin rosca expuesta.",o:"Mantiene el café caliente durante horas y beber de él se siente como beber de una taza normal.",y:["Cierre totalmente hermético","No altera el sabor del café"],x:["Lavado a mano recomendado"]},
+
+  /* ==================== 9. ACCESORIOS (5) ==================== */
+  {id:"cuchara",q:"cucharas medidoras café acero 10 g",c:"acc",n:"Cucharas medidoras de café",p:1,r:4,t:"Dosificar sin báscula",d:"Juego de cucharas de acero inoxidable con medidas grabadas de 5 a 15 g.",o:"Un plan B razonable si aún no tienes báscula, aunque no sustituye a pesar el grano.",y:["Muy baratas","Fáciles de limpiar"],x:["Menos exactas que pesar"]},
+  {id:"pincel",q:"pincel limpieza molinillo café madera",c:"acc",n:"Pincel de limpieza para molinillo",p:1,r:4.5,t:"Mantener el molinillo limpio",d:"Brocha de cerdas naturales y mango de madera para barrer restos de café molido de muelas y encimera.",o:"Evita que queden restos viejos atrapados en el molinillo que estropeen la siguiente taza.",y:["Llega a rincones estrechos","Cerdas suaves que no rayan"],x:["Solo limpieza en seco"]},
+  {id:"termo",q:"termómetro digital cocina sonda líquidos",c:"acc",n:"Termómetro digital de sonda",p:1,r:4,t:"Controlar la temperatura del agua",d:"Termómetro de lectura rápida para comprobar el agua entre 90 y 96 °C o la leche al vaporizar.",o:"Muy útil al principio para no quemar el café con agua hirviendo ni pasarte calentando la leche.",y:["Lectura en segundos","Útil también para la leche"],x:["Hay que limpiar la sonda"]},
+  {id:"adaptador_ind",q:"placa difusora induccion cafetera italiana Bialetti",c:"acc",n:"Adaptador de inducción para cafetera italiana",p:1,r:4.5,t:"Usar tu Moka clásica en inducción",d:"Disco difusor de acero con mango aislante que permite usar cafeteras de aluminio en placas de inducción.",o:"Si ya tienes una cafetera italiana de aluminio y cambias a inducción, te ahorra comprar una cafetera nueva.",y:["Aprovecha cafeteras de aluminio","Mango frío desmontable"],x:["Añade un par de minutos al calentamiento"]},
+  {id:"pulverizador",q:"pulverizador agua spray RDT cafe grano",c:"acc",n:"Pulverizador RDT antiestática para grano",p:1,r:4.5,t:"Adiós al café pegado en el molinillo",d:"Mini frasco pulverizador de vidrio para echar una gota de agua sobre los granos antes de moler.",o:"Un truco de barista infalible: elimina por completo la electricidad estática y evita que el café salga volando.",y:["Elimina la estática al moler","Tamaño bolsillo"],x:["Basta una sola pulsación"]}
+];
+
+/* ===== LÓGICA DE RENDERIZADO, SEPARADORES POR APARTADO Y ENLACES ===== */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const enlace = p => p.a
+  ? `https://www.${DOM}/dp/${encodeURIComponent(p.a)}?tag=${encodeURIComponent(TAG)}`
+  : `https://www.${DOM}/s?k=${encodeURIComponent(p.q)}&tag=${encodeURIComponent(TAG)}`;
+const precioTxt = p => "€".repeat(p || 1);
+
+let catActiva = "todos", textoBusq = "", ordenAct = "d";
+
+$("#stN").textContent = P.length;
+$("#stC").textContent = Object.keys(CATS).length - 2;
+
+$("#filtros").innerHTML = Object.entries(CATS).map(([k, [nom, ico]]) =>
+  `<button class="f" data-c="${k}" aria-pressed="${k === catActiva}">${ico} ${nom}</button>`
+).join("");
+
+function tarjetaHTML(p) {
+  const [catNom, catIco] = CATS[p.c] || ["Café", "☕"];
+  const notaTxt = String(p.r).replace(".", ",");
+  const pros = p.y?.length ? `<div class="pros"><h3>Lo mejor</h3><ul>${p.y.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>` : "";
+  const contras = p.x?.length ? `<div class="contras"><h3>A tener en cuenta</h3><ul>${p.x.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>` : "";
+  return `
+  <article class="producto" id="p-${esc(p.id)}">
+    <figure>
+      ${p.i ? `<img src="${esc(p.i)}" alt="${esc(p.n)}" loading="lazy" referrerpolicy="no-referrer">` : `<span class="ico" aria-hidden="true">${catIco}</span>`}
+      <span class="cat">${esc(catNom)}</span>
+    </figure>
+    <div>
+      <h2>${esc(p.n)}</h2>
+      <div class="meta">
+        <span class="estrellas" style="--p:${p.r / 5 * 100}%" role="img" aria-label="Valoración: ${notaTxt} de 5">★★★★★</span>
+        <span class="num">${notaTxt}/5</span>
+        <span class="gama" title="Gama de precio">${precioTxt(p.p)}</span>
+        <span class="ideal">${esc(p.t)}</span>
+      </div>
+      <p class="desc">${esc(p.d)}</p>
+      <p class="resena"><strong>Nuestra opinión.</strong> ${esc(p.o)}</p>
+      <div class="puntos">${pros}${contras}</div>
+      <a class="btn" href="${enlace(p)}" target="_blank" rel="sponsored nofollow noopener">Ver precio en Amazon</a>
+    </div>
+  </article>`;
+}
+
+function render() {
+  const q = textoBusq.trim().toLowerCase();
+  let res = P.filter(p => {
+    const okCat = catActiva === "todos" || (catActiva === "eco" ? p.p === 1 : p.c === catActiva);
+    const okTxt = !q || [p.n, p.t, p.d, p.o, CATS[p.c]?.[0]].some(v => v && v.toLowerCase().includes(q));
+    return okCat && okTxt;
+  });
+
+  if (ordenAct === "r") res = [...res].sort((a, b) => b.r - a.r || a.p - b.p);
+  if (ordenAct === "p") res = [...res].sort((a, b) => a.p - b.p || b.r - a.r);
+
+  $("#cuenta").textContent = `Mostrando ${res.length} de ${P.length} productos`;
+
+  if (!res.length) {
+    $("#lista").innerHTML = `<p class="vacio">No hay productos que coincidan con tu búsqueda. Prueba con otro término o limpia los filtros.</p>`;
+    return;
+  }
+
+  // Si estamos viendo "Todos" y en orden por apartados, insertamos cabecera por cada categoría
+  if (catActiva === "todos" && ordenAct === "d") {
+    let ultCat = "";
+    $("#lista").innerHTML = res.map(p => {
+      let cab = "";
+      if (p.c !== ultCat) {
+        ultCat = p.c;
+        const [nom, ico] = CATS[p.c] || ["Apartado", "☕"];
+        const totalCat = res.filter(item => item.c === p.c).length;
+        cab = `<h2 class="sec-titulo">${ico} ${esc(nom)} <span>${totalCat} ${totalCat === 1 ? "producto" : "productos"}</span></h2>`;
+      }
+      return cab + tarjetaHTML(p);
+    }).join("");
+  } else {
+    $("#lista").innerHTML = res.map(tarjetaHTML).join("");
+  }
+}
+
+// Sección Económico
+const ecoTop = P.filter(p => p.p === 1).sort((a, b) => b.r - a.r).slice(0, 8);
+$("#ecoLista").innerHTML = ecoTop.map(p => `
+  <article class="ec">
+    <small>${esc(CATS[p.c]?.[0] || "")} · ★ ${String(p.r).replace(".", ",")}</small>
+    <h3>${esc(p.n)}</h3>
+    <p>${esc(p.t)}. ${esc(p.d)}</p>
+    <div class="ln">
+      <a href="#p-${esc(p.id)}">Leer opinión</a>
+      <a href="${enlace(p)}" target="_blank" rel="sponsored nofollow noopener">Amazon →</a>
+    </div>
+  </article>
+`).join("");
+
+$("#ecoVer").addEventListener("click", () => {
+  catActiva = "eco";
+  document.querySelectorAll(".f").forEach(b => b.setAttribute("aria-pressed", b.dataset.c === "eco"));
+  render();
+  $("#productos").scrollIntoView();
+});
+
+$("#filtros").addEventListener("click", e => {
+  const b = e.target.closest(".f");
+  if (!b) return;
+  catActiva = b.dataset.c;
+  document.querySelectorAll(".f").forEach(btn => btn.setAttribute("aria-pressed", btn === b));
+  render();
+});
+$("#buscar").addEventListener("input", e => { textoBusq = e.target.value; render(); });
+$("#orden").addEventListener("change", e => { ordenAct = e.target.value; render(); });
+
+render();
+
+/* ===== ASISTENTE BARISTA ===== */
+const ia = $("#ia"), men = $("#men"), sug = $("#sug"), inp = $("#inp");
+const SUGS = ["Empezar sin gastar mucho", "Mejor molinillo", "Café para inducción", "Espresso en casa", "Café frío"];
+
+function addMsg(html, tipo = "bot") {
+  const d = document.createElement("div");
+  d.className = `msg ${tipo}`;
+  d.innerHTML = html;
+  men.appendChild(d);
+  men.scrollTop = men.scrollHeight;
+}
+
+function responder(q) {
+  const t = q.toLowerCase();
+  let elegidos = [];
+  let intro = "Aquí tienes lo más recomendable de la guía:";
+
+  if (t.includes("inducci")) {
+    intro = "Para placas de inducción necesitas base ferromagnética o un adaptador:";
+    elegidos = P.filter(p => ["mokaacero", "adaptador_ind", "buono"].includes(p.id));
+  } else if (t.includes("molinillo") || t.includes("moler")) {
+    intro = "El molinillo es la mejor inversión para mejorar tu café:";
+    elegidos = P.filter(p => p.c === "molinillos").slice(0, 4);
+  } else if (t.includes("espresso")) {
+    intro = "Para espresso en casa destacan estas opciones:";
+    elegidos = P.filter(p => ["dedica", "bambino", "tamper", "mignon"].includes(p.id));
+  } else if (t.includes("frío") || t.includes("frio") || t.includes("verano") || t.includes("cold")) {
+    intro = "Para preparar cold brew suave en la nevera:";
+    elegidos = P.filter(p => ["mizudashi", "coldbotella", "aeropress"].includes(p.id));
+  } else if (t.includes("empezar") || t.includes("barat") || t.includes("econ") || t.includes("poco")) {
+    intro = "Buen equipo para empezar con presupuesto ajustado:";
+    elegidos = P.filter(p => ["skerton", "aeropress", "moka3", "clever"].includes(p.id));
+  } else {
+    elegidos = P.filter(p => [p.n, p.t, p.d].join(" ").toLowerCase().includes(t)).slice(0, 4);
+    if (!elegidos.length) {
+      intro = "Te dejo tres favoritos polivalentes que nunca fallan:";
+      elegidos = P.filter(p => ["aeropress", "c2", "moka"].includes(p.id));
+    }
+  }
+
+  const cards = elegidos.map(p => `
+    <div class="mini">
+      <div><strong>${esc(p.n)}</strong><br><a href="#p-${esc(p.id)}" onclick="document.getElementById('ia').classList.remove('abierta')">Ver ficha</a> · <a href="${enlace(p)}" target="_blank" rel="sponsored nofollow noopener">Amazon</a></div>
+      <span>${precioTxt(p.p)} · ★${p.r}</span>
+    </div>`).join("");
+  addMsg(`${intro}${cards}`, "bot");
+}
+
+sug.innerHTML = SUGS.map(s => `<button type="button" class="chip">${s}</button>`).join("");
+sug.addEventListener("click", e => {
+  if (!e.target.classList.contains("chip")) return;
+  const txt = e.target.textContent;
+  addMsg(esc(txt), "user");
+  responder(txt);
+});
+
+$("#iaAbrir").addEventListener("click", () => {
+  const ab = ia.classList.toggle("abierta");
+  $("#iaAbrir").setAttribute("aria-expanded", ab);
+  if (ab && !men.children.length) addMsg("¡Hola! Dime qué método te gusta o cuánto quieres gastar y te recomiendo productos de la lista.");
+  if (ab) inp.focus();
+});
+$("#iaCerrar").addEventListener("click", () => {
+  ia.classList.remove("abierta");
+  $("#iaAbrir").setAttribute("aria-expanded", "false");
+});
+$("#form").addEventListener("submit", e => {
+  e.preventDefault();
+  const txt = inp.value.trim();
+  if (!txt) return;
+  addMsg(esc(txt), "user");
+  inp.value = "";
+  responder(txt);
+});
+</script>
+</body>
+</html>
